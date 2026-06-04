@@ -1,0 +1,75 @@
+.hero{
+    min-height: 100vh;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    padding: 0 10%;
+    padding-top: 6rem;
+}
+
+.hero-greeting{
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #a0aec0;
+    margin-bottom: 0.3rem;
+}
+
+.hero-name{
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #00bfff 0.2%, #00ff88 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+}
+
+.hero-title{
+    font-size: 1.8rem;
+    font-weight:600;
+    margin-bottom: 1rem;
+}
+
+.hero-title span{
+    background: linear-gradient(135deg, #00bfff 60%, #00ff88 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-description{
+    font-size: 1rem;
+    color: #a0aec0;
+    max-width: 500px;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}   
+
+.hero-buttons{
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn-primary{
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #00bfff, #00ff88);
+    color: #0a0f1e;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-outline{
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    border: 2px solid #00bfff;
+    background: transparent;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+}
