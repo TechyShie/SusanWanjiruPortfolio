@@ -1,0 +1,122 @@
+.contact {
+    padding: 5rem 10%;
+}
+
+.contact-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.contact-title span {
+    background: linear-gradient(135deg, #00bfff 70%, #00ff88 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contact-subtitle {
+    color: #a0aec0;
+    margin-bottom: 3rem;
+    font-size: 1rem;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    background-color: #0d1526;
+    border: 1px solid #1e2a45;
+    border-radius: 12px;
+    padding: 3rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateX(5px);
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+    color: #00bfff;
+    flex-shrink: 0;
+}
+
+.contact-item p {
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+.contact-socials {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icon {
+    color: #a0aec0;
+    font-size: 1.8rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #00bfff;
+    transform: translateY(-3px);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-input, .form-textarea {
+    background-color: #1e2a45;
+    border: 1px solid #2a3a5c;
+    border-radius: 8px;
+    padding: 0.9rem 1.2rem;
+    color: #ffffff;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+    font-family: inherit;
+}
+
+.form-input:focus, .form-textarea:focus {
+    border-color: #00bfff;
+}
+
+.form-textarea {
+    resize: vertical;
+}
+
+.form-button {
+    padding: 0.9rem 2rem;
+    background: linear-gradient(135deg, #00bfff 70%, #00ff88 100%);
+    color: #0a0f1e;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: opacity 0.3s ease;
+}
+
+.form-button:hover {
+    opacity: 0.85;
+}

@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,16 +12,16 @@
     z-index: 1000;
 }
 
-.navbar-logo{
+.navbar-logo {
     font-size: 1.8rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #00bfff 50%, #00ff88 100%);
+    background: linear-gradient(135deg, #00bfff 70%, #00ff88 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
-.navbar-links{
+.navbar-links {
     display: flex;
     list-style: none;
     gap: 2rem;
@@ -34,6 +34,6 @@
     transition: color 0.3s ease;
 }
 
-.navbar-links a:hover{
+.navbar-links a:hover {
     color: #00bfff;
 }
