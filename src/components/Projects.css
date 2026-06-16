@@ -130,3 +130,21 @@
     border-radius: 20px;
     font-size: 0.8rem;
 }
+
+@media (max-width: 768px) {
+    .projects {
+        padding: 3rem 5%;
+    }
+
+    .projects-scroll {
+        grid-template-columns: 1fr;
+        overflow-x: auto;
+        display: flex;
+        scroll-snap-type: x mandatory;
+    }
+
+    .project-card {
+        min-width: 85vw;
+        scroll-snap-align: center;
+    }
+}

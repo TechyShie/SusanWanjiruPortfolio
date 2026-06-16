@@ -120,3 +120,14 @@
 .form-button:hover {
     opacity: 0.85;
 }
+
+@media (max-width: 768px) {
+    .contact {
+        padding: 3rem 5%;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+    }
+}

@@ -37,3 +37,54 @@
 .navbar-links a:hover {
     color: #00bfff;
 }
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 5%;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .navbar-links {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #0a0f1e;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+        z-index: 1000;
+    }
+
+    .navbar-links.open {
+        display: flex;
+    }
+
+    .navbar-links a {
+        font-size: 1.5rem;
+        color: #a0aec0;
+        transition: all 0.3s ease;
+    }
+
+    .navbar-links a:hover {
+        color: transparent;
+        background: linear-gradient(135deg, #00bfff 70%, #00ff88 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+}

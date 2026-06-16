@@ -15,8 +15,10 @@
 }
 
 .hero-greeting {
-    font-size: 1.1rem;
+    font-size: 1.8rem;
     color: #a0aec0;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
 }
 
 .hero-name {
@@ -108,4 +110,51 @@
     object-fit: contain;
     mix-blend-mode: lighten;
     transform: translate(-70px, -90px);
+}
+.cursor{
+    display: inline-block;
+    color: #00bfff;
+    animation: blink 1s infinite;
+    margin-left: 2px;
+
+}
+
+@keyframes blink{
+    0%, 100% {opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 0 5%;
+        padding-top: 6rem;
+        text-align: center;
+        min-height: auto;
+    }
+
+    .hero-name {
+        font-size: 2.5rem;
+    }
+
+    .hero-title {
+        font-size: 1.4rem;
+    }
+
+    .hero-greeting {
+        font-size: 1.2rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image-container {
+        display: none;
+    }
 }

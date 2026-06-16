@@ -49,3 +49,13 @@
     border-radius: 20px;
     font-size: 0.85rem;
 }
+
+@media (max-width: 768px) {
+    .skills {
+        padding: 3rem 5%;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
