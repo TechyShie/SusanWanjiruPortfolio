@@ -6,7 +6,7 @@
 .skills-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--text-primary);
     margin-bottom: 3rem;
 }
 
@@ -24,14 +24,14 @@
 }
 
 .skill-card {
-    background-color: #0d1526;
-    border: 1px solid #1e2a45;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 2rem;
 }
 
 .skill-card h3 {
-    color: #ffffff;
+    color: var(--text-primary);
     font-size: 1.2rem;
     margin-bottom: 1.2rem;
 }
@@ -43,8 +43,9 @@
 }
 
 .tag {
-    background-color: #1e2a45;
+    background-color: var(--bg-secondary);
     color: #00bfff;
+    border: 1px solid #00bfff;
     padding: 0.4rem 1rem;
     border-radius: 20px;
     font-size: 0.85rem;

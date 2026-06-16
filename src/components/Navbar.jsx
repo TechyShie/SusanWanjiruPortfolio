@@ -1,8 +1,9 @@
 import "./Navbar.css"
 import { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
+import { MdLightMode, MdDarkMode } from 'react-icons/md'
 
-function Navbar() {
+function Navbar({ darkMode, toggleMode }) {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const toggleMenu = () => {
@@ -26,8 +27,14 @@ function Navbar() {
         <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
       </ul>
 
-      <div className="hamburger" onClick={toggleMenu}>
-        {menuOpen ? <FaTimes /> : <FaBars />}
+      <div className="navbar-actions">
+        <button className="theme-toggle" onClick={toggleMode}>
+          {darkMode ? <MdLightMode /> : <MdDarkMode />}
+        </button>
+
+        <div className="hamburger" onClick={toggleMenu}>
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </div>
       </div>
 
     </nav>

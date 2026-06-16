@@ -1,9 +1,13 @@
 import './Projects.css'
+import { useState } from 'react'
 import ecopulse from '../assets/eco_pulse_ss.png'
 import campus from '../assets/campus_connect_ss.png'
 import medicine from '../assets/medicine_explorer_ss.png'
 
 function Projects() {
+  const [currentPage, setCurrentPage] = useState(0)
+  const projectsPerPage = 3
+
   const projects = [
     {
       name: "Traditional Medicine Explorer",
@@ -28,13 +32,22 @@ function Projects() {
     }
   ]
 
+  const totalPages = Math.ceil(projects.length / projectsPerPage)
+  const currentProjects = projects.slice(
+    currentPage * projectsPerPage,
+    (currentPage + 1) * projectsPerPage
+  )
+
+  const prev = () => setCurrentPage(p => Math.max(0, p - 1))
+  const next = () => setCurrentPage(p => Math.min(totalPages - 1, p + 1))
+
   return (
     <section className="projects" id="projects">
 
       <h2 className="projects-title">My <span>Projects</span></h2>
 
-      <div className="projects-scroll">
-        {projects.map((project) => (
+      <div className="projects-grid">
+        {currentProjects.map((project) => (
           <div className="project-card" key={project.name}>
 
             <div className="project-image">
@@ -60,6 +73,32 @@ function Projects() {
 
           </div>
         ))}
+      </div>
+
+      <div className="projects-nav">
+        <button 
+          className="nav-btn" 
+          onClick={prev}
+          disabled={currentPage === 0}>
+          ‹
+        </button>
+
+        <div className="nav-dots">
+          {Array.from({ length: totalPages }).map((_, index) => (
+            <button
+              key={index}
+              className={`dot ${index === currentPage ? 'active' : ''}`}
+              onClick={() => setCurrentPage(index)}
+            />
+          ))}
+        </div>
+
+        <button 
+          className="nav-btn" 
+          onClick={next}
+          disabled={currentPage === totalPages - 1}>
+          ›
+        </button>
       </div>
 
     </section>
