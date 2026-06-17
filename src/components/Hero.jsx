@@ -51,10 +51,14 @@ function Hero({ darkMode }){
             using React, Javascript and Python - turning ideas into real, working products. 
             Open to internship opportunities and exciting projects.</p>
 
-            <div className="hero-buttons">
+           <div className="hero-buttons">
                 <a href="#projects" className="btn-primary">View Projects</a>
-                <a href="#contact" className="btn-outline">Contact Me</a>
-            </div>
+                <a href="/Susan_Wanjiru_CV.pdf" 
+                  download="Susan_Wanjiru_CV.pdf"
+                  className="btn-outline">
+                   Download CV
+                </a>
+          </div>
           </div>
 
           <div className="hero-image-container">
