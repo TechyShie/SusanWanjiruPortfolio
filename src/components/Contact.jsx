@@ -1,10 +1,13 @@
 import "./Contact.css";
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { MdEmail, MdLocationOn, MdPhone } from 'react-icons/md'
+import useScrollReveal from "../hooks/useScrollReveal"
 
 function Contact() {
+  const ref = useScrollReveal()
+
   return (
-    <section className="contact" id="contact">
+    <section className="contact reveal" id="contact" ref={ref}>
       <h2 className="contact-title">Get In <span>Touch</span></h2>
       <p className="contact-subtitle">I'm currently open to internship opportunities and exciting projects.</p>
 

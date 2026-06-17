@@ -3,6 +3,7 @@ import { useState } from 'react'
 import ecopulse from '../assets/eco_pulse_ss.png'
 import campus from '../assets/campus_connect_ss.png'
 import medicine from '../assets/medicine_explorer_ss.png'
+import useScrollReveal from "../hooks/useScrollReveal"
 
 function Projects() {
   const [currentPage, setCurrentPage] = useState(0)
@@ -40,9 +41,11 @@ function Projects() {
 
   const prev = () => setCurrentPage(p => Math.max(0, p - 1))
   const next = () => setCurrentPage(p => Math.min(totalPages - 1, p + 1))
+  const ref = useScrollReveal()
+
 
   return (
-    <section className="projects" id="projects">
+    <section className="projects reveal" id="projects" ref={ref}>
 
       <h2 className="projects-title">My <span>Projects</span></h2>
 

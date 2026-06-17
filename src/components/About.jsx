@@ -1,9 +1,12 @@
 import "./About.css"
 import aboutCharacter from "../assets/about-character.png"
+import useScrollReveal from "../hooks/useScrollReveal"
 
 function About() {
+  const ref = useScrollReveal()
+
   return (
-    <section className="about" id="about">
+    <section className="about reveal" id="about" ref={ref}>
 
       <div className="about-image-container">
         <img src={aboutCharacter} alt="About" className="about-image" />

@@ -1,4 +1,6 @@
 import './Skills.css'
+import useScrollReveal from "../hooks/useScrollReveal"
+
 
 function Skills() {
   const skills = [
@@ -20,8 +22,11 @@ function Skills() {
     }
   ]
 
+  const ref = useScrollReveal()
+
+
   return (
-    <section className="skills" id="skills">
+    <section className="skills reveal" id="skills" ref={ref}>
       <h2 className="skills-title">My <span>Skills</span></h2>
 
       <div className="skills-grid">
