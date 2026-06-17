@@ -1,10 +1,30 @@
 import "./Navbar.css"
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import { MdLightMode, MdDarkMode } from 'react-icons/md'
 
 function Navbar({ darkMode, toggleMode }) {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState('home')
+
+  useEffect(() => {
+    const sections = document.querySelectorAll('section[id]')
+    
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id)
+          }
+        })
+      },
+      { threshold: 0.3 }
+    )
+
+    sections.forEach((section) => observer.observe(section))
+
+    return () => sections.forEach((section) => observer.unobserve(section))
+  }, [])
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen)
@@ -20,11 +40,41 @@ function Navbar({ darkMode, toggleMode }) {
       <div className="navbar-logo">SW.</div>
 
       <ul className={`navbar-links ${menuOpen ? 'open' : ''}`}>
-        <li><a href="#home" onClick={closeMenu}>Home</a></li>
-        <li><a href="#about" onClick={closeMenu}>About</a></li>
-        <li><a href="#skills" onClick={closeMenu}>Skills</a></li>
-        <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
-        <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
+        <li>
+          <a href="#home" 
+             onClick={closeMenu}
+             className={activeSection === 'home' ? 'active' : ''}>
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="#about" 
+             onClick={closeMenu}
+             className={activeSection === 'about' ? 'active' : ''}>
+            About
+          </a>
+        </li>
+        <li>
+          <a href="#skills" 
+             onClick={closeMenu}
+             className={activeSection === 'skills' ? 'active' : ''}>
+            Skills
+          </a>
+        </li>
+        <li>
+          <a href="#projects" 
+             onClick={closeMenu}
+             className={activeSection === 'projects' ? 'active' : ''}>
+            Projects
+          </a>
+        </li>
+        <li>
+          <a href="#contact" 
+             onClick={closeMenu}
+             className={activeSection === 'contact' ? 'active' : ''}>
+            Contact
+          </a>
+        </li>
       </ul>
 
       <div className="navbar-actions">
